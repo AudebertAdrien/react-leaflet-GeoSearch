@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./style.css";
-import userSWR, { SWRConfig } from "swr";
+import useSWR, { SWRConfig } from "swr";
 import DisplayUsers from "./DisplayUsers";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
@@ -21,7 +21,7 @@ function Users() {
   const url =
     "https://data.police.uk/api/crimes-street/all-crime?lat=52.629729&lng=-1.131592&date=2019-10";
 
-  const { data, error } = userSWR(url);
+  const { data, error } = useSWR(url);
   const users = data && !error ? data.slice(0, 1000) : [];
 
   if (error) return <div>error...</div>;
