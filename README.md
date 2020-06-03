@@ -2,6 +2,9 @@
 
 This app find all crimes commited in london par GeoSearch.
 
+> Run yarn install
+> and yarn start
+
 - React 16.13
 - SWR is a React Hooks library for remote data fetching.
 - Leaflet is the leading open-source JavaScript library for mobile-friendly interactive maps
