@@ -1,11 +1,11 @@
 import React from "react";
 import { Map, TileLayer, Marker, Popup } from "react-leaflet";
 
-export default function DisplayUsers({ users, myPositon, categories }) {
+export default function DisplayCrimes({ crimes, myPositon, categories }) {
   const [filterCategory, setFilterCategory] = React.useState(null);
-  const filterUsers = filterCategory
-    ? users.filter((user) => user.category === filterCategory)
-    : (users)
+  const filterCrimes = filterCategory
+    ? crimes.filter((crime) => crime.category === filterCategory)
+    : (crimes)
 
   return (
     <>
@@ -26,12 +26,12 @@ export default function DisplayUsers({ users, myPositon, categories }) {
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         />
 
-        {filterUsers.map((user) => (
+        {filterCrimes.map((crime) => (
           <Marker
-            key={user.id}
-            position={[user.location.latitude, user.location.longitude]}
+            key={crime.id}
+            position={[crime.location.latitude, crime.location.longitude]}
           >
-            <Popup>A pretty CSS with users info</Popup>
+            <Popup>A pretty CSS with crimes info</Popup>
           </Marker>
         ))}
       </Map>
