@@ -3,7 +3,7 @@
 This app find all crimes commited in Leicester par GeoSearch.
 
 Link in production 
-> https://thirsty-panini-304dc1.netlify.app/
+> https://crimes-in-london.netlify.app/
 
 > Run yarn install
 > and yarn start
